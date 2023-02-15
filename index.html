@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>RIS Budget App</header>
+      <main>
+        <div class="budget-and-output-container">
+          <div class="budget-container">
+            <form id="bud-form">
+              <div class="budget-input">
+                <label for="buget">Your Budget:</label>
+                <input
+                  id="budget"
+                  name="budget"
+                  type="number"
+                  placeholder="0.00"
+                  required
+                />
+              </div>
+
+              <button class="btn-budget">Submit</button>
+            </form>
+          </div>
+
+          <div class="budget-output">
+            <div class="budget-display">
+              <h3>Your Budget:</h3>
+              <p id="bud">$00.00</p>
+            </div>
+            <div class="balance-display">
+              <h3>Your Balance:</h3>
+              <p id="bal">$00.00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="expenses-and-output-container">
+          <div class="expenses">
+            <form id="exp-form">
+              <div class="expenses-section">
+                <label for="expense">Expense:</label>
+                <input
+                  id="expense"
+                  name="expense"
+                  type="text"
+                  placeholder="my expense..."
+                  required
+                />
+              </div>
+              <div class="expenses-section">
+                <label for="amount">Amount:</label>
+                <input
+                  id="amount"
+                  name="amount"
+                  type="number"
+                  placeholder="0.00"
+                  required
+                />
+              </div>
+              <button class="btn-expense">Add</button>
+            </form>
+          </div>
+
+          <div class="expense-display">
+            <!-- <div class="expense-item">
+              <p id="expense-name">This is the name <span class="exp-amount">456<span></span></p>
+              <div class="expense-buttons">
+                <button class="btn-edit"><i class="fas fa-pen"></i></button>
+                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

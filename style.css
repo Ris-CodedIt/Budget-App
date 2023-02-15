@@ -1,0 +1,186 @@
+:root {
+  --primary: #0d1821;
+  --secondary: #fe5f00;
+  --action: #f7f052;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  /* font-family: Roboto, sans-serif; */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  color: #38726c;
+  width: 80%;
+  height: 90%;
+  border-radius: 5px;
+  border: 1px solid #38726c;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  width: 100%;
+  height: 10%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  /* text-align: center; */
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  background-color: transparent;
+
+  border: 1px solid var(--secondary);
+  height: 30px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn-budget,
+.btn-expense {
+  background-color: var(--action);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  display: block;
+  margin: 5px auto;
+  width: 50%;
+}
+
+button:active {
+  outline: none;
+  transform: scale(0.9);
+}
+
+main {
+  width: 95%;
+  margin: 10px auto;
+  overflow-y: hidden;
+}
+
+.budget-and-output-container {
+  display: flex;
+  margin-bottom: 10px;
+  height: 50%;
+}
+
+.budget-container {
+  width: 50%;
+  height: 100%;
+}
+
+.budget-input {
+  margin: 20px auto;
+}
+
+.budget-output {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#bud,
+#bal {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.expenses-and-output-container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expenses-section {
+  margin-top: 10px;
+}
+
+.expense-display {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 120px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  margin: 5px auto;
+  padding-left: 2px;
+  width: 95%;
+  background-color: #edeef0;
+  border-radius: 3px;
+}
+#expense-name {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expense-buttons {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+}
+
+.btn-edit {
+  color: rgb(12, 189, 12);
+}
+
+.btn-delete {
+  color: red;
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 60%;
+  }
+
+  .expenses-and-output-container {
+    flex-direction: row;
+  }
+
+  .expense-display,
+  .expenses {
+    width: 50%;
+    height: 300px;
+  }
+
+  .expense-display {
+    margin-top: 10px;
+  }
+  .expenses {
+    margin-right: 5px;
+  }
+}
